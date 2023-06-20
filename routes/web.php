@@ -20,6 +20,7 @@ Route::prefix("admin")->group(function () {
         Route::get('/new-request','newRequest')->name('admin.newRequest');
         Route::get('/students','studentList')->name('admin.students');
         Route::get("/addmition-accept/{id}",'addmitionAccept')->name("admin.addmitionAccept");
+        Route::get("/banners",'banners')->name("admin.banners");
 
         // routes with middleware
         Route::middleware('auth:admin')->group(function () {

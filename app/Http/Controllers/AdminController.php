@@ -24,9 +24,13 @@ class AdminController extends Controller
     public function addmitionAccept($id){
          $data=Student::where('id',$id)->first();
          $data['status']=1;
+         $data['password']=$data->contact;
          $data['addmition_date']=Carbon::today();
          $data->save();
          return redirect()->back();
 
+    }
+    public function banners(){
+        return view('admin.banner');
     }
 }

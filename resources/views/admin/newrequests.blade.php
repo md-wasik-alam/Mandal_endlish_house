@@ -12,7 +12,7 @@ All New Requests
                 <div class="card-header d-flex flex-column">
 
                     <h3 class="card-title mb-3">{{$title}}</h3>
-                    <div class="d-flex justify-content-between align-items-center" style="gap:15px">
+                    <div class="d-flex  justify-content-between align-items-center" style="gap:15px">
 
                         <form action="">
                             <div class="input-group" style="width: 300px;">
@@ -27,8 +27,8 @@ All New Requests
                             </div>
                         </form>
 
-
-
+                        
+                        
                     </div>
                 </div>
                 <!-- /.card-header -->
@@ -41,7 +41,7 @@ All New Requests
                                 <th>Roll</th>
                                 <th>Name</th>
                                 <th>Mother Name</th>
-                                <th>Father Name</th>
+                                <th>Contact</th>
                                 <th>Status</th>
                                 <th>Applay Date</th>
                                 <th>Action</th>
@@ -53,8 +53,8 @@ All New Requests
 
                                     <td class="border border-slate-700 p-1.5 pl-10">{{ $item->id }}</td>
                                     <td class="border border-slate-700 p-1.5 pl-10">{{ $item->name }}</td>
-                                    <td class="border border-slate-700 p-1.5 pl-10">{{ $item->mother_name }}</td>
                                     <td class="border border-slate-700 p-1.5 pl-10">{{ $item->father_name }}</td>
+                                    <td class="border border-slate-700 p-1.5 pl-10">{{ $item->contact }}</td>
                                     <td class="border border-slate-700 p-1.5 pl-10">{{ $item->getStatus() }}</td>
 
 
@@ -147,7 +147,7 @@ All New Requests
                                         </tr>
                                         <tr>
                                             <th>Addmition Data</th>
-                                            <td>{{ $item->updated_at ? date('d M Y', strtotime($item->addmition_date)) : 'N/A' }}
+                                            <td>{{ $item->addmition_date ? date('d M Y', strtotime($item->addmition_date)) : 'N/A' }}
                                             </td>
                                         </tr>
 
